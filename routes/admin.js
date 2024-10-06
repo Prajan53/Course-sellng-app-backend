@@ -118,6 +118,7 @@ adminRouter.put("/course", adminMiddleware, async (req,res) =>{
     });
 });
 
+
 adminRouter.get("/course/bulk", adminMiddleware, async (req,res) =>{
     const adminId = req.userId;
 

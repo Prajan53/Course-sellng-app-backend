@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const {JWT_USER_PASSWORD} = require("../config");
 const {z} = require("zod");
 const bcrypt = require("bcrypt");
-const {userMiddleware} = require("../middleware/user");
+const userMiddleware = require("../middleware/user");
 
 const userRouter = Router();
 
@@ -103,6 +103,5 @@ userRouter.get("/purchases", userMiddleware, async(req,res) =>{
 });
 
 
-module.exports = {
-    userRouter: userRouter};
+module.exports = userRouter;
 
